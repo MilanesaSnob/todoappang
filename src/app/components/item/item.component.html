@@ -1,0 +1,27 @@
+
+
+<div class="container">
+    
+    <div class="row">
+        <div class="col p-1">
+            
+            <div class="card d-flex flex-row " [ngClass]="{'listo': item.completado}"> <!-- con el [ngClass] llamo a la clase CSS que me modifica los items chequeados -->
+            
+                <div class="titulo d-flex flex-row align-items-top">
+                    <input type="checkbox" class="form-check-input" [checked]="item.completado" (change)="onToggle(item)">
+                    <p>{{ item.titulo | uppercase }}</p>
+                </div>
+                <div class="precio">
+                    <p>{{ item.precio | currency }}</p>
+                </div>
+                <div>
+                    <p>{{ item.cantidad }}</p>
+                </div>
+                <div class="total">
+                    <p>{{ item.precio * item.cantidad | currency }}</p> 
+                </div>
+                <button class="btn btn-info me-2" (click)="onDelete(item)">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-4">
+
+            <form action="" (ngSubmit)="onSubmit()">
+                <!-- (ngSubmit) evento de angular que permite atrapar el submit del button-->
+                <!-- acordarse de hacer el import del FormsModule en app.module.ts -->
+                <!-- 
+                Como Items maneja los datos de manera centralizada, necesito ser hijo de items para poder enviarle un evento y que me actualice el arreglo de datos.
+                Esto nos obliga a crear un servicio que nos permita acceder a esta info desde cualquier parte
+                -->
+
+                <h3 class="text-center mb-3">Alta de artículos</h3>
+                <div class="mb-3">
+                    <label class="form-label" for="">ID</label>
+                    <input class="form-control form-control-lg" type="text" name="id" id="" [(ngModel)]="id">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="">Nombre</label>
+                    <input class="form-control form-control-lg" type="text" name="titulo" id="" [(ngModel)]="titulo">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="">Precio</label>
+                    <input class="form-control form-control-lg" type="text" name="precio" id="" [(ngModel)]="precio">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="">Cantidad</label>
+                    <input class="form-control form-control-lg" type="text" name="cantidad" id=""
+                        [(ngModel)]="cantidad">
+                </div>
+                <div class="d-flex">
+                    <button class="btn btn-info mt-2 flex-fill" type="submit" value="Crear">Crear Articulo</button>
+                </div>    
+            </form>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+.card {
+    padding: 10px; 
+    border: solid thin black; 
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+.card div:nth-child(1) { width: 40%;}
+.card div:nth-child(2) { width: 20%;}
+.card div:nth-child(3) { width: 10%;}
+.card div:nth-child(4) { width: 30%;}
+
+
+
+
+h2 {font-size: 1.2em;}
+.precio {color: green;}
+.total {font-weight: 600; color:orangered;}
+.titulo {
+    input {margin-right: 10px;}
+}
+.listo {
+    color: white; 
+    background: #212529; 
+
+    .precio {
+        color: #FFC107;
+    }
+
+    
+}
+
+/*
+input [type="checkbox" i]:focus {
+    background-color: black !important;
+    cursor: default;
+    appearance: auto;
+    border: solid thin white;
+}*/
